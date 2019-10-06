@@ -1,0 +1,152 @@
+swagger: "2.0"
+info:
+  description: Arithemtics over HTTP!"
+  version: "1.0.0"
+  title: "Calculator"
+host: "localhost:8080"
+basePath: "/api"
+schemes:
+- "https"
+- "http"
+paths:
+  /add:
+    get:
+      tags:
+      - "add"
+      summary: "Add two numbers"
+      description: "Add two numbers send as parameters."
+      operationId: "add"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "a"
+        in: "query"
+        description: "First element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      - name: "b"
+        in: "query"
+        description: "Second element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      responses:
+        200:
+          description: "Successful operation"
+          examples:
+            application/json: { "result": 0 }
+            application/xml: <result>0</result>
+          schema:
+            type: string
+        400:
+          description: "Error"
+  /sub:
+    get:
+      tags:
+      - "sub"
+      summary: "Add two numbers"
+      description: "Subtracts two numbers send as parameters."
+      operationId: "sub"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "a"
+        in: "query"
+        description: "First element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      - name: "b"
+        in: "query"
+        description: "Second element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      responses:
+        200:
+          description: "Successful operation"
+          examples:
+            application/json: { "result": 0 }
+            application/xml: <result>0</result>
+          schema:
+            type: string
+        400:
+          description: "Error"
+  /mul:
+    get:
+      tags:
+      - "mul"
+      summary: "Multiply two numbers"
+      description: "Multiply two numbers send as parameters."
+      operationId: "mul"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "a"
+        in: "query"
+        description: "First element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      - name: "b"
+        in: "query"
+        description: "Second element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      responses:
+        200:
+          description: "Successful operation"
+          examples:
+            application/json: { "result": 0 }
+            application/xml: <result>0</result>
+          schema:
+            type: string
+        400:
+          description: "Error"
+  /div:
+    get:
+      tags:
+      - "div"
+      summary: "Divide two numbers"
+      description: "Divide two numbers send as parameters."
+      operationId: "div"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "a"
+        in: "query"
+        description: "First element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      - name: "b"
+        in: "query"
+        description: "Second element"
+        required: true
+        type: "number"
+        format: "double"
+        default: 0
+      responses:
+        200:
+          description: "Successful operation"
+          examples:
+            application/json: { "result": 0 }
+            application/xml: <result>0</result>
+          schema:
+            type: string
+        400:
+          description: "Error"
+          
